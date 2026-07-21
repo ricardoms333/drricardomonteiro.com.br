@@ -515,7 +515,7 @@ var TRACK = {
   ga4:       'G-3QMVX25CKM',        // Google Analytics 4
   googleAds: 'AW-XXXXXXXXX'         // Google Ads (opcional)
 };
-function idOk(v){return v && v.indexOf('X')<0 && v!=='META_PIXEL_ID';}
+function idOk(v){return !!v && v.indexOf('XXXX')<0 && v!=='META_PIXEL_ID';}
 var trackingLoaded=false;
 function loadTracking(){
   if(trackingLoaded) return; trackingLoaded=true;
