@@ -81,7 +81,30 @@ body{font-family:var(--sans);background:radial-gradient(1000px 600px at 50% -5%,
   <div class="foot">
     <div>Dr. Ricardo Monteiro · Cirurgia Plástica · Manaus — AM</div>
     <div class="legal">CRM-AM 9846 · RQE 6732</div>
+    <div class="legal" style="margin-top:8px"><a href="https://drricardomonteiro.com.br" style="color:var(--lilac)">Política de Privacidade</a></div>
   </div>
 </div>
+
+<div id="ck" hidden style="position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(17,29,47,.97);border-top:1px solid var(--line);padding:14px 18px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap">
+  <span style="font-size:.8rem;color:var(--muted);max-width:520px">Usamos cookies para medir e melhorar a experiência. Ao continuar, você aceita nossa política.</span>
+  <span style="display:flex;gap:8px">
+    <button onclick="ck(false)" style="background:none;border:1px solid var(--line);color:var(--cream);padding:8px 16px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer">Recusar</button>
+    <button onclick="ck(true)" style="background:var(--lilac);border:1px solid var(--lilac);color:var(--navy);padding:8px 16px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer">Aceitar</button>
+  </span>
+</div>
+
+<script>
+var GA='G-3QMVX25CKM', loaded=false;
+function loadGA(){ if(loaded)return; loaded=true; window.dataLayer=window.dataLayer||[];
+  var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA; document.head.appendChild(s);
+  function gtag(){dataLayer.push(arguments);} window.gtag=gtag; gtag('js',new Date()); gtag('config',GA);
+}
+function ev(n){ if(window.gtag) gtag('event',n); if(window.dataLayer) dataLayer.push({event:n}); }
+function ck(yes){ try{localStorage.setItem('cookie_consent',yes?'yes':'no');}catch(e){} document.getElementById('ck').hidden=true; if(yes) loadGA(); }
+(function(){ var c; try{c=localStorage.getItem('cookie_consent');}catch(e){}
+  if(c==='yes') loadGA(); else if(c!=='no') document.getElementById('ck').hidden=false; })();
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){a.addEventListener('click',function(){ev('whatsapp_click');});});
+document.querySelectorAll('a[href*="instagram.com"]').forEach(function(a){a.addEventListener('click',function(){ev('instagram_click');});});
+</script>
 </body>
 </html>
