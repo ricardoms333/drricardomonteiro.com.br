@@ -462,7 +462,7 @@ function toggleMenu(){document.getElementById('menu').classList.toggle('open')}
 function closeMenu(){document.getElementById('menu').classList.remove('open')}
 function enviarForm(e){e.preventDefault();var f=e.target;var body=new URLSearchParams(new FormData(f)).toString();
   fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
-    .then(function(){if(window.trackEvent)trackEvent('form_submit','Lead');alert('Obrigado! Recebemos sua mensagem e retornaremos em breve.');f.reset();})
+    .then(function(){if(window.trackEvent)trackEvent('form_submit','Lead');window.location.href='/obrigado';})
     .catch(function(){alert('Não foi possível enviar agora. Por favor, fale com a gente pelo WhatsApp.');});}
 const io=new IntersectionObserver((es)=>es.forEach(en=>{if(en.isIntersecting)en.target.classList.add('in')}),{threshold:.12});
 document.querySelectorAll('.reveal, .fade-left').forEach(el=>io.observe(el));
