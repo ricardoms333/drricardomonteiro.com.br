@@ -42,6 +42,9 @@ header.scrolled{background:rgba(17,29,47,.94);backdrop-filter:blur(10px);padding
 .menu a{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);opacity:.85;transition:.25s}
 .menu a:hover{color:var(--lilac);opacity:1}
 .menu .btn{padding:11px 22px}
+.nav-ig{display:flex;align-items:center;justify-content:center;color:var(--cream);opacity:.8;transition:.25s}
+.nav-ig svg{width:20px;height:20px}
+.nav-ig:hover{color:var(--lilac);opacity:1}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}
 .burger span{width:26px;height:2px;background:var(--cream);transition:.3s}
 
@@ -296,6 +299,7 @@ footer .legal{margin-top:10px;font-size:.72rem;opacity:.7}
       <a href="#diferenciais" onclick="closeMenu()">Diferenciais</a>
       <a href="#depoimentos" onclick="closeMenu()">Avaliações</a>
       <a href="#localizacao" onclick="closeMenu()">Localização</a>
+      <a href="https://instagram.com/drricardomonteiro" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram" onclick="if(window.trackEvent)trackEvent('instagram_click');closeMenu()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-.99.05-1.53.21-1.88.35-.47.18-.81.4-1.16.75-.35.35-.57.69-.75 1.16-.14.35-.3.89-.35 1.88-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05.99.21 1.53.35 1.88.18.47.4.81.75 1.16.35.35.69.57 1.16.75.35.14.89.3 1.88.35 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.99-.05 1.53-.21 1.88-.35.47-.18.81-.4 1.16-.75.35-.35.57-.69.75-1.16.14-.35.3-.89.35-1.88.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-.99-.21-1.53-.35-1.88a3.12 3.12 0 00-.75-1.16 3.12 3.12 0 00-1.16-.75c-.35-.14-.89-.3-1.88-.35-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.46 5.46 0 110 10.92 5.46 5.46 0 010-10.92zm0 9a3.54 3.54 0 100-7.08 3.54 3.54 0 000 7.08zm6.95-9.22a1.27 1.27 0 11-2.55 0 1.27 1.27 0 012.55 0z"/></svg></a>
       <a href="#contato" class="btn" onclick="closeMenu()">Agendar</a>
     </nav>
     <button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
